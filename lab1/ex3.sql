@@ -1,3 +1,5 @@
+drop procedure if exists updateReaderID;
+
 DELIMITER //
 CREATE PROCEDURE updateReaderID(IN old_ID CHAR(8), IN new_ID CHAR(8))
 BEGIN

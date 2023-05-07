@@ -1,5 +1,11 @@
 -- 创建图书表
 use lab1;
+drop table if exists Reserve;
+drop table if exists Borrow;
+drop table if exists Book;
+drop table if exists Reader;
+
+
 CREATE TABLE Book (
     ID CHAR(8) PRIMARY KEY,
     name VARCHAR(10) NOT NULL,

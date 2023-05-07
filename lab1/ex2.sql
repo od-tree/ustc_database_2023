@@ -57,6 +57,8 @@ ORDER BY sum DESC
 LIMIT 10;
 
 #创建一个读者借书信息的视图,该视图包含读者号、姓名、所借图书号、图书名和借期；并使用该视图查询最近一年所有读者的读者号以及所借阅的不同图书数;
+drop view if exists readerborrowinfo;
+
 CREATE VIEW ReaderBorrowInfo AS
 SELECT Borrow.reader_ID, Reader.name, Borrow.book_ID, Book.name AS book_name, Borrow.borrow_Date
 FROM Borrow
